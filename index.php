@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Découvrez le portfolio d'Alan Coiffard, développeur web et photographe passionné par la nature et la faune sauvage.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo.png" width="500px" />
     <title>Portfolio - Alan Coiffard</title>
@@ -35,16 +36,16 @@
     <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="carousel">
-            <div class="carousel-slide"><img src="./images/hero/hero_image_1.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_2.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_3.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_4.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_5.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_6.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_7.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_8.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_9.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="./images/hero/hero_image_10.jpg" alt="Image 1"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_1.webp" alt="hero_image_1"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_2.webp" alt="hero_image_2"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_3.webp" alt="hero_image_3"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_4.webp" alt="hero_image_4"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_5.webp" alt="hero_image_5"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_6.webp" alt="hero_image_6"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_7.webp" alt="hero_image_7"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_8.webp" alt="hero_image_8"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_9.webp" alt="hero_image_9"></div>
+            <div class="carousel-slide"><img src="./images/hero/hero_image_10.webp" alt="hero_image_10"></div>
         </div>
         <div class="hero-content">
             <h1>Salut, je suis Alan Coiffard</h1>
@@ -53,17 +54,6 @@
         </div>
         </div>
     </section>
-
-
-    <!-- Projets Section -->
-    <!-- <section id="projets">
-        <h2>Mes Projets Web</h2>
-        <div class="grid">
-            <div class="card">Projet 1</div>
-            <div class="card">Projet 2</div>
-            <div class="card">Projet 3</div>
-        </div>
-    </section> -->
 
     <!-- Photos Section -->
     <section id="photos">
@@ -75,7 +65,7 @@
             foreach ($images as $image) {
             ?>
                 <div class="photo-item">
-                    <img src="<?= $image ?>" alt="Photo">
+                    <img src="<?= $image ?>" alt="<?= $image ?>">
                 </div>
             <?php
             }
@@ -119,9 +109,9 @@
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
-                        <li><a class="github" href="https://github.com/Alan-Coiffard"><i class="fa fa-github"></i></a></li>
-                        <li><a class="www" href="https://portfolio.alan-coiffard.ovh"><i class="fa fa-globe"></i></a></li>
-                        <li><a class="linkedin" href="https://www.linkedin.com/in/alan-coiffard-924033172"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a class="github" href="https://github.com/Alan-Coiffard" alt="github"><i class="fa fa-github"></i></a>Github</li>
+                        <li><a class="www" href="https://portfolio.alan-coiffard.ovh"><i class="fa fa-globe"></i></a>Site web</li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/in/alan-coiffard-924033172"><i class="fa fa-linkedin"></i></a>Linkedin</li>
                     </ul>
                 </div>
             </div>
