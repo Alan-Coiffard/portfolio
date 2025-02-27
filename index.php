@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" width="500px" />
     <title>Portfolio - Alan Coiffard</title>
-    <link rel="stylesheet" href="./css/styles.css">
+
+    <?php
+    include 'bootstrap-5.0.0/includeBootstrapCss.php';
+    require './templates/arrows/arrow-down.php';
+    $arrowDown = new arrowDown;
+    require './templates/arrows/arrow-up.php';
+    $arrowUp = new arrowUp;
+    $arrowUp->arrowUp('accueil');
+    ?>
+    <link rel="stylesheet" href="css/hovi.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -15,10 +26,8 @@
         <nav>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#projets">Projets</a></li>
                 <li><a href="#photos">Photos</a></li>
                 <li><a href="#apropos">À propos</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -40,7 +49,8 @@
         <div class="hero-content">
             <h1>Salut, je suis Alan Coiffard</h1>
             <p>Développeur web et photographe passionné.</p>
-            <!-- <a href="#projets" class="btn">Découvrir mon travail</a> -->
+            <?php $arrowDown->arrowDown('photos'); ?>
+        </div>
         </div>
     </section>
 
@@ -72,7 +82,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <!-- <section id="contact">
         <h2>Contactez-moi</h2>
         <form>
             <label for="name">Nom</label>
@@ -86,16 +96,30 @@
 
             <button type="submit">Envoyer</button>
         </form>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer>
-        <p>© 2024 Alan Coiffard</p>
-        <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="center col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Created by
+                        <a href="#">Alan COIFFARD</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="github" href="https://github.com/Alan-Coiffard"><i class="fa fa-github"></i></a></li>
+                        <li><a class="www" href="https://portfolio.alan-coiffard.ovh"><i class="fa fa-globe"></i></a></li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/in/alan-coiffard-924033172"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+    <?php include 'bootstrap-5.0.0/includeBootstrapJs.php'; ?>
+
 </body>
 
 <script>
