@@ -6,9 +6,9 @@
     --brun-cuir: #161714;
     --gris-ardoise: #708090;
 
-    --main: #d7c4ad; 
-    --secondary: #33281A; 
-    --third: #968671; 
+    --main: #d7c4ad;
+    --secondary: #33281A;
+    --third: #968671;
     --contrast: #344d59;
 
     --text-bright: #fff;
@@ -149,7 +149,6 @@ section {
 h2 {
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 /* Grille Projets */
@@ -172,17 +171,53 @@ h2 {
 }
 
 /* Galerie Photos */
-.gallery {
+/* Grille de photos uniformes avec effet de zoom au hover */
+.photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
 }
 
-.gallery img {
+.photo-grid>* {
+    flex: 1 1 auto;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 250px;
+}
+
+.photo-item img {
     width: 100%;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
 }
 
+.photo-item:hover img {
+    transform: scale(1.2);
+}
+
+/* presentation */
+
+.presentation {
+    justify-items: center;
+}
+
+.presentation .text {
+    justify-items: center;
+    width: 70%;
+}
+
+.presentation .text p {
+    margin: 10px 0;
+    text-align: center;
+}
 
 /* Footer */
 

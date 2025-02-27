@@ -68,35 +68,44 @@
     <!-- Photos Section -->
     <section id="photos">
         <h2>Mon Univers Photo</h2>
-        <div class="gallery">
-            <img src="photo1.jpg" alt="Photo 1">
-            <img src="photo2.jpg" alt="Photo 2">
-            <img src="photo3.jpg" alt="Photo 3">
+        <div id="bestof" class="photo-grid">
+            <?php
+            $dirname = "./images/bestof/";
+            $images = glob($dirname . "*.webp");
+            foreach ($images as $image) {
+            ?>
+                <div class="photo-item">
+                    <img src="<?= $image ?>" alt="Photo">
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </section>
 
+
     <!-- À Propos Section -->
-    <section id="apropos">
+    <section id="apropos" class="presentation">
         <h2>À propos de moi</h2>
-        <p>Je suis Alan, un passionné de développement web et de photographie.</p>
+        <div class="text">
+            <p>
+                Je m'appelle Alan Coiffard, photographe autodidacte passionné par la nature et les animaux sauvages. La photographie est pour moi un moyen de capturer l'instant, de révéler la beauté discrète du monde qui nous entoure et de raconter des histoires sans mots.
+            </p>
+            -
+            <p>
+                Bien que mes sujets de prédilection soient la faune et la flore, j'apprécie également le portrait, cherchant toujours à mettre en lumière l'authenticité et l'émotion de chaque personne. J'aime aussi relever des défis techniques, que ce soit dans la photographie sportive ou l'astrophoto, où patience et précision sont essentielles.
+            </p>
+            -
+            <p>
+                J'ai eu l'opportunité de collaborer sur plusieurs projets, notamment pour des associations et des groupes scolaires, et de travailler sur des séries personnelles avec des amis. Mon approche repose sur le respect de mon environnement et sur une volonté de minimiser mon impact pour capturer des images sincères et puissantes.
+            </p>
+        </div>
+        <a class="btn btn-dark" href="https://alan-Coiffard.ovh">
+            Pour en savoir plus sur mon côté développeur
+            <i class="fa fa-globe"></i>
+        </a>
     </section>
 
-    <!-- Contact Section -->
-    <!-- <section id="contact">
-        <h2>Contactez-moi</h2>
-        <form>
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name">
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-
-            <button type="submit">Envoyer</button>
-        </form>
-    </section> -->
 
     <!-- Footer -->
     <footer class="site-footer">
