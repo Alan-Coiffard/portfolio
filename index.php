@@ -27,7 +27,7 @@
         <nav>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#photos">Photos</a></li>
+                <li><a href="photos.php">Photos</a></li>
                 <li><a href="#apropos">À propos</a></li>
             </ul>
         </nav>
