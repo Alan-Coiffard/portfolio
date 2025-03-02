@@ -46,8 +46,8 @@
         <h2>Mon Univers Photo - étendue</h2>
         <div id="bestof" class="photo-grid">
             <?php
-            $dirname = "./images/catalogue";
-            $images = glob($dirname . "*.webp");
+            $dirname = "./images/catalogue/";
+            $images = glob($dirname . "*.jpg");
             foreach ($images as $image) {
             ?>
                 <div class="photo-item">
